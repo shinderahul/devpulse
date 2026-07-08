@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import { Providers } from '@/components/Providers'
 import { Navbar } from '@/components/layout/Navbar'
 
 const inter = Inter({ variable: '--font-inter', subsets: ['latin'] })
@@ -19,10 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${mono.variable} antialiased`}>
+        <Providers>
           <Navbar />
           <main className="min-h-screen bg-gray-50 dark:bg-gray-950">
             {children}
           </main>
+        </Providers>
       </body>
     </html>
   )
