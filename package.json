@@ -15,7 +15,8 @@
     "next-auth": "^5.0.0-beta.31",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "recharts": "^3.9.2"
+    "recharts": "^3.9.2",
+    "shinderahul-pebble-ui": "^1.0.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

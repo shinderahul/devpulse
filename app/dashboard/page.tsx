@@ -11,6 +11,8 @@ import {
   getTopRepos,
   getLanguages,
 } from '@/lib/github'
+import { Avatar, Badge } from 'shinderahul-pebble-ui'
+import 'shinderahul-pebble-ui/styles.css';
 
 export const revalidate = 3600
 
@@ -29,6 +31,11 @@ export default async function DashboardPage() {
 
   return (
     <DashboardShell user={session.user}>
+      <div className="flex items-center gap-4 mb-6">
+        <Badge variant="success">This storybook library will utilise letters</Badge>
+        <Badge variant="danger">Danger</Badge>
+        <Avatar src={session.user.image ?? 'Rahul Shinde'} size="lg" />
+      </div>
       <StatsGrid stats={stats} />
       <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
